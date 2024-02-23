@@ -3,18 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillConductor.Api", "BillConductor.Api\BillConductor.Api.csproj", "{93861473-02CA-468B-A35E-97192059E9BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillConductor.Api", "BillConductor.Api\BillConductor.Api.csproj", "{93861473-02CA-468B-A35E-97192059E9BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillConductor.Tests", "BillConductor.Tests\BillConductor.Tests.csproj", "{4F592926-5FE0-4EF4-9271-65F3F9919615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillConductor.Tests", "BillConductor.Tests\BillConductor.Tests.csproj", "{4F592926-5FE0-4EF4-9271-65F3F9919615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillConductor.Dal", "BillConductor.Dal\BillConductor.Dal.csproj", "{2A63FCFC-450B-4D4E-B9C5-8D247895C614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillConductor.Dal", "BillConductor.Dal\BillConductor.Dal.csproj", "{2A63FCFC-450B-4D4E-B9C5-8D247895C614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillConductor.Domain", "BillConductor.Domain\BillConductor.Domain.csproj", "{C202D937-115A-46AE-97BE-92DF4294C7DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillConductor.Domain", "BillConductor.Domain\BillConductor.Domain.csproj", "{C202D937-115A-46AE-97BE-92DF4294C7DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BillConductor.Ui", "BillConductor.Ui", "{C715073E-A8F6-475A-9272-D86B23F08A8E}"
+	ProjectSection(SolutionItems) = preProject
+		BillConductor.Ui\src\App.vue = BillConductor.Ui\src\App.vue
+		BillConductor.Ui\src\main.ts = BillConductor.Ui\src\main.ts
+	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -72,5 +75,11 @@ Global
 		{C202D937-115A-46AE-97BE-92DF4294C7DF}.Release|x64.Build.0 = Release|Any CPU
 		{C202D937-115A-46AE-97BE-92DF4294C7DF}.Release|x86.ActiveCfg = Release|Any CPU
 		{C202D937-115A-46AE-97BE-92DF4294C7DF}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98F04568-9B9D-42AD-839E-260E3D101F15}
 	EndGlobalSection
 EndGlobal
