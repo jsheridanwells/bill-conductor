@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BillConductor.Core\BillConductor.Core.csproj" />
+  </ItemGroup>
+
 </Project>
