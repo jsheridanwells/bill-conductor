@@ -482,3 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Ignore Sqlite dbs.  These can be created with a dotnet ef migrations
+**/*.db
+

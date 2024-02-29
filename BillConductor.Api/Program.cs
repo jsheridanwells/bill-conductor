@@ -1,9 +1,29 @@
+using BillConductor.Application.HealthCheck.Commands;
+using BillConductor.Application.HealthCheck.Queries;
+using BillConductor.Infrastructure;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// TODO : Try out Autofac for this
+builder.Services.AddDbContext<BillConductorContext>(opt =>
+{
+    var baseConnectionString = "Data Source= bill_conductor.db";
+    var connectionString = new SqliteConnectionStringBuilder(baseConnectionString)
+    {
+        Mode = SqliteOpenMode.ReadWriteCreate,
+    }.ToString();
+
+    opt.UseSqlite(connectionString);
+});
+builder.Services.AddTransient<ISendHealthCheckCommandHandler, SendHealthCheckCommandHandler>();
+builder.Services.AddTransient<IGetHealthCheckQueryHandler, GetHealthCheckQueryHandler>();
+// ENDTODO :
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
