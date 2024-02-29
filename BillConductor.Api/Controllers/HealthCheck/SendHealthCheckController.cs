@@ -1,7 +1,5 @@
 ﻿using BillConductor.Application.HealthCheck.Commands;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
 
 namespace BillConductor.Api.Controllers.HealthCheck
 {
